@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0%;
+    background-image: url(design/teglafal.jpg);
+}
+* {
+    box-sizing: border-box;
+}
+article, nav{
+    border: 1px solid lightgray;
+}
+main{
+    font-family: 'Arial', Verdana, sans-serif;
+    color: beige;
+    font-size: 10px;
+    margin: auto;
+    width: 80%;
+    margin-top: 10px;
+    max-width: 1000px;
+    background-color: #333333;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "h h"
+                        "a n"
+                        "f f";
+}
+header{
+    text-transform: uppercase;
+    background-image: url(design/beer-new_401732638.jpg);
+    height: 300px;
+    background-size: cover;
+    font-weight: bold;
+    font-family: 'Garamond';
+    font-size: 32px;
+    letter-spacing: 4px;
+    padding-left: 30px;
+    padding-top: 30px;
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-decoration: none;
+    list-style-type: none;
+}
+#menu li{
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+nav li:hover{
+    color: gray;
+}
+nav a{
+    text-decoration: none;
+    border-radius: 1px white;
+    color: red;
+    font-weight: bold;
+}
+nav a:hover{
+    color: white;
+}
+article{
+    text-align: justify;
+    font-size: 10px;
+    grid-area: a;
+    background-color: black;
+    padding: 10px;
+}
+article h3{
+    font-size: 15px;
+    padding-left: 15px;
+}
+article li{
+    list-style-type: square;
+}
+footer{
+    grid-area: f;
+    color: white;
+    text-align: center;
+    background-color: lightgray;
+    padding: 10px;
+    font-weight: bold;
+}
+.sorfurdo{
+    float: left;
+    width: 25%;
+    margin: 0px 20px 0px 15px;
+}
+table{
+    margin: 15px;
+    border: lightgrey;
+    border-collapse: collapse;
+}
+td, th{
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+tr:nth-child(odd) {
+    background-color: black;
+}
+tr:nth-child(even) {
+    background-color: gray;
+}
+
+@media only screen and(max-width: 700px){
+    main{
+        grid-template-areas: "h"
+                            "a"
+                            "n"
+                            "f";
+    }
+}
